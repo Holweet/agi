@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeadsUp - Save on Food Costs</title>
+    <style>
+        :root {
+            --primary: #2c6e49;
+            --secondary: #4c956c;
+            --light: #fefee3;
+            --accent: #ff9e00;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin-left: 30px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), url('food-bg.jpg') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #e08d00;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        section {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary);
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        .feature-img {
+            height: 200px;
+            background-color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        .feature-content {
+            padding: 25px;
+        }
+        .feature-content h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        .contact {
+            background: var(--light);
+        }
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: center;
+        }
+        .contact-info {
+            font-size: 1.1rem;
+        }
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+        .highlight {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            display: block;
+            margin: 10px 0;
+        }
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">HeadsUp</div>
+                <ul class="nav-links">
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Cut Your Food Costs Today</h1>
+            <p>HeadsUp helps restaurants, hotels, and caterers in the Western Cape save money on food purchases</p>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How HeadsUp Works</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-img">1</div>
+                    <div class="feature-content">
+                        <h3>Scan Your Invoice</h3>
+                        <p>Simply take a photo of your food purchase invoice</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img">2</div>
+                    <div class="feature-content">
+                        <h3>Instant Analysis</h3>
+                        <p>We compare prices across multiple retailers</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img">3</div>
+                    <div class="feature-content">
+                        <h3>See Your Savings</h3>
+                        <p>Get recommendations on where to buy at lower costs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Use HeadsUp</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-content">
+                        <h3>Save Money</h3>
+                        <p>Reduce your food expenses without compromising quality</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content">
+                        <h3>Local Focus</h3>
+                        <p>Specialized for Western Cape food suppliers</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content">
+                        <h3>Simple Process</h3>
+                        <p>No complicated setups - just scan and save</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get Started Today</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p>Ready to reduce your food costs?</p>
+                    <p>Contact us for more information:</p>
+                    <span class="highlight">069 108 1301</span>
+                    <p>Available via phone or WhatsApp</p>
+                    <p>Service available for restaurants, hotels, caterers, and all food service businesses in the Western Cape</p>
+                </div>
+                <div>
+                    <a href="tel:0691081301" class="btn">Call Now</a>
+                    <a href="https://wa.me/27691081301" class="btn" style="background: #25D366; margin-top: 15px;">WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 HeadsUp. All rights reserved.</p>
+            <p>Helping Western Cape food businesses save on costs</p>
+        </div>
+    </footer>
+</body>
+</html>
